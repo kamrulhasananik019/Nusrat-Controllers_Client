@@ -53,6 +53,7 @@ const AddReview = () => {
                 displayName: user.displayName,
                 reviewText: formData.reviewText,
                 rating: formData.rating,
+                name: formData.name,
                 imageUrl,
             });
 
@@ -116,11 +117,23 @@ const AddReview = () => {
                         />
                     </div>
                     <div className='grid'>
-                        <label htmlFor="image">Image (optional)</label>
+                        <label htmlFor="rating">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            {...register('name')}
+                            className='border rounded p-2'
+                        />
+                    </div>
+                    <div className='grid'>
+                        <label htmlFor="image">Image </label>
                         <input 
                             type="file" 
                             id="image" 
-                            name="image" 
+                            name="image"
+                            required  
                             {...register('image')}
                             className='border rounded p-2'
                         />
