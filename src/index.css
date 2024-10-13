@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tiptap .ProseMirror {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 150px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tiptap .ProseMirror p {
+    margin: 0;
+}
+
+.tiptap .ProseMirror:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.tiptap .ProseMirror h1, .tiptap .ProseMirror h2, .tiptap .ProseMirror h3 {
+    margin-top: 1em;
+}
