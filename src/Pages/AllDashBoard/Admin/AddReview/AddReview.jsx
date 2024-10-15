@@ -42,7 +42,6 @@ const AddReview = () => {
         setIsLoading(true);
 
         try {
-            // Upload image if provided
             let imageUrl = '';
             if (formData.image && formData.image.length > 0) {
                 imageUrl = await handleImageUpload(formData.image[0]);
@@ -117,7 +116,7 @@ const AddReview = () => {
                         />
                     </div>
                     <div className='grid'>
-                        <label htmlFor="rating">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input 
                             type="text" 
                             id="name" 
@@ -142,9 +141,10 @@ const AddReview = () => {
                 <input 
                     className='mt-5 btn bg-blue-100' 
                     type="submit" 
-                    value="Submit" 
+                    value={isLoading ? "Submitting..." : "Submit"} 
                     disabled={isLoading} 
                 />
+                {isLoading && <p className="text-blue-500 mt-2">Submitting your review, please wait...</p>}
             </form>
         </section>
     );
