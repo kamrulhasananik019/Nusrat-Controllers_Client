@@ -75,6 +75,18 @@ const Dashboard = () => {
                                         </NavLink>
                                     </li>
                                     <div className="divider"></div>
+
+                                    <li>
+                                        <NavLink to="/dashboard/addslider">
+                                            <FaBook className="mr-2" /> Add Slider 
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/deletedslider">
+                                            <FaBook className="mr-2" /> Delete slider 
+                                        </NavLink>
+                                    </li>
+                                    <div className="divider"></div>
                                     <li>
                                         <NavLink to="/dashboard/addreview">
                                             <FaBook className="mr-2" />Add Review

@@ -20,6 +20,8 @@ import AddServices from "../Pages/AllDashBoard/Admin/AddServices/AddServices";
 import DeleteServices from "../Pages/AllDashBoard/Admin/DeleteServices/DeleteServices";
 import AddReview from "../Pages/AllDashBoard/Admin/AddReview/AddReview";
 import DeleteReview from "../Pages/AllDashBoard/Admin/DeleteReview/DeleteReview";
+import DeleteSlider from "../Pages/AllDashBoard/Admin/DeleteSlider/DeleteSlider";
+import AddSlider from "../Pages/AllDashBoard/Admin/AddSlider/AddSlider";
 
 
 
@@ -72,6 +74,14 @@ export const router = createBrowserRouter([
                     {
                         path: "deletedportfolio",
                         element: <AdminRoute><DeletedPortfolio /></AdminRoute>
+                    },
+                    {
+                        path: "addslider",
+                        element: <AdminRoute><AddSlider /></AdminRoute>
+                    },
+                    {
+                        path: "deletedslider",
+                        element: <AdminRoute><DeleteSlider /></AdminRoute>
                     },
                     {
                         path: "addreview",

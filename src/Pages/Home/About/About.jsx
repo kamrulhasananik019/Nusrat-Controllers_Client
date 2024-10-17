@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const About = () => {
     return (
-        <section className='bg-blue-100' id="about">
+        <section className='bg-[#1F1F1F]' id="about">
             <div className="container mx-auto flex flex-col md:flex-row py-20 px-4 items-center ">
                 <div className="flex-1 text-center  mb-10 md:mb-0 ">
 

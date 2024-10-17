@@ -5,18 +5,19 @@ import Services from '../Services/Services';
 import Expertise from '../Experience/Experience';
 import Portfolio from '../Portfolio/Portfolio';
 import Review from '../Review/Review';
+import Sliders from '../Sliders/Sliders';
 
 
 const Home = () => {
     return (
         <div>
             <Hero />
-            <About/>
-            <Portfolio/>
-            <Services/>
-            <Review/>
-            <Expertise/>
-            
+            <Portfolio />
+            <Sliders/>
+            <About />
+            <Services />
+            <Review />
+            <Expertise />
         </div>
     );
 };
