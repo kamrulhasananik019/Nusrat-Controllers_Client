@@ -12,9 +12,10 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <Portfolio />
-            <Sliders/>
             <About />
+            <Portfolio />
+            <Sliders />
+
             <Services />
             <Review />
             <Expertise />

@@ -16,6 +16,7 @@
     "firebase": "^10.1.0",
     "flowbite": "^1.7.0",
     "flowbite-react": "^0.4.11",
+    "framer-motion": "^11.11.9",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "or": "^0.2.0",
