@@ -22,6 +22,7 @@ import AddReview from "../Pages/AllDashBoard/Admin/AddReview/AddReview";
 import DeleteReview from "../Pages/AllDashBoard/Admin/DeleteReview/DeleteReview";
 import DeleteSlider from "../Pages/AllDashBoard/Admin/DeleteSlider/DeleteSlider";
 import AddSlider from "../Pages/AllDashBoard/Admin/AddSlider/AddSlider";
+import ManageProfile from "../Pages/AllDashBoard/Admin/ManageProfile/ManageProfile";
 
 
 
@@ -50,6 +51,11 @@ export const router = createBrowserRouter([
                     {
                         path: "allusers",
                         element: <AdminRoute><AllUser /></AdminRoute>
+                    },
+
+                    {
+                        path: "manageprofile",
+                        element: <AdminRoute><ManageProfile /></AdminRoute>
                     },
                     {
                         path: "addexperience",

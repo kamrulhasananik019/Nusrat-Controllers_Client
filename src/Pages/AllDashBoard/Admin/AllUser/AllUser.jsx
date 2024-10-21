@@ -85,12 +85,18 @@ const AlldbUser = () => {
                     {dbUsers.map(dbUser => (
                         <div key={dbUser._id} className='border border-slate-400 rounded-md p-2 my-2'>
                             <div className='flex justify-between px-2'>
-                                <div>
-                                    <h3 className='text-2xl font-semibold'>{dbUser?.displayName}</h3>
-                                    <p className='text-base font-semibold'>{dbUser?.email}</p>
-                                </div>
 
                                 <div className='flex gap-5'>
+                                    <div>
+                                        <img className=" rounded-full" src={dbUser?.photoURL} alt="" />
+                                    </div>
+                                    <div className='pt-5'>
+                                        <h3 className='text-2xl font-semibold'>{dbUser?.displayName}</h3>
+                                        <p className='text-base font-semibold'>{dbUser?.email}</p>
+                                    </div>
+                                </div>
+
+                                <div className='flex gap-5 pt-5'>
                                     <div>
                                         <p className={`${dbUser?.role === "admin" ? 'text-red-600' : 'text-blue-600'} px-5 py-2 text-xl font-semibold`}>{dbUser?.role}</p>
                                     </div>
