@@ -1,44 +1,100 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
+import { Download } from 'lucide-react';
 
 const About = ({ profileImage }) => {
+    const fadeInUp = {
+        initial: { opacity: 0, y: 60 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
+
+    const statsData = [
+        { value: 4, label: 'Years Experience' },
+        { value: 300, label: 'Completed Projects' },
+        { value: 20, label: 'Ongoing Projects' }
+    ];
+
     return (
-        <section className='bg-[#1F1F1F]' id="about">
-            <div className="container mx-auto flex flex-col md:flex-row py-20 px-4 items-center ">
-                <div className="flex-1 text-center  mb-10 md:mb-0 ">
+        <section className="bg-[#1F1F1F] text-white" id="about">
+            <div className="container mx-auto flex flex-col lg:flex-row py-20 px-4 items-center space-y-12 lg:space-y-0 lg:space-x-12">
+                <motion.div
+                    className="flex-1 text-center lg:text-left"
+                    initial="initial"
+                    animate="animate"
+                    variants={fadeInUp}
+                >
                     {profileImage && (
-                        <img src={profileImage?.imageUrl} alt="Profile" className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto border-4  border-blue-600" />
+                        <div className="relative inline-block">
+                            <motion.img
+                                src={profileImage?.imageUrl}
+                                alt="Profile"
+                                className="rounded-full w-64 h-64 lg:w-96 lg:h-96 object-cover border-4 border-blue-600"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                            <motion.div
+                                className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold"
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ delay: 0.5, type: 'spring', stiffness: 260, damping: 20 }}
+                            >
+                                Hello!
+                            </motion.div>
+                        </div>
                     )}
 
-
-                    {/* Overlay for the counters */}
-                    <div className="grid justify-items-center align-baseline  text-white  mt-5">
-
-                        <div className=" w-full  md:w-6/6 xl:w-3/6 grid  grid-cols-12 py-5 px-2  mb-5 bg-blue-600 rounded-md  border-white border-4">
-                            <p className='   text-3xl  col-span-4'>0<CountUp end={4} /></p>
-                            <p className='   text-left text-2xl col-span-8'>Years  Experience</p>
-                        </div>
-
-                        <div className=" w-full  md:w-6/6  xl:w-3/6 grid  grid-cols-12 py-5 px-2  mb-5 bg-blue-600 rounded-md  border-white border-4">
-                            <p className='   text-3xl  col-span-4 '>+<CountUp end={300} /></p>
-                            <p className='   text-left text-2xl col-span-8'> Completed Projects</p>
-                        </div>
-                        <div className=" w-full  md:w-6/6 xl:w-3/6 grid  grid-cols-12 py-5 px-2  mb-5 bg-blue-600 rounded-md  border-white border-4">
-                            <p className='   text-3xl  col-span-4'>+<CountUp end={20} /></p>
-                            <p className='   text-left text-2xl col-span-8'>Ongoing Projects</p>
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                        {statsData.map((stat, index) => (
+                            <motion.div
+                                key={index}
+                                className="bg-blue-600/10 rounded-lg p-6 text-center"
+                                whileHover={{ scale: 1.05, backgroundColor: '#2563EB' }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <CountUp
+                                    end={stat.value}
+                                    prefix={stat.value >= 100 ? '+' : ''}
+                                    className="text-4xl font-bold text-blue-600"
+                                />
+                                <p className="text-sm mt-2">{stat.label}</p>
+                            </motion.div>
+                        ))}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="flex-1 md:pl-10 text-center md:text-left ">
-                    <h2 className="text-3xl md:text-5xl  lg:text-6xl font-bold mb-4">About</h2>
-                    <p className="text-base md:text-2xl mb-6">
-                        I’m Nusrat Jahan, I’ve had the opportunity to experience and develop in a creative environment since 2022.</p>
-                    <p className="text-base md:text-2xl mb-6">I always desire to break from my limitations. By honing design skills through years of experience, I believe that my design can connect well with your audience.</p>
-                    <p className="text-base md:text-2xl mb-6">
-                        Let's make it happen together!</p>
-                    <button className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">Download CV</button>
-                </div>
+                <motion.div
+                    className="flex-1 lg:pl-10 text-center lg:text-left"
+                    initial="initial"
+                    animate="animate"
+                    variants={fadeInUp}
+                >
+                    <h2 className="text-4xl lg:text-6xl font-bold mb-6">About</h2>
+                    <motion.p
+                        className="text-lg mb-4"
+                        variants={fadeInUp}
+                    >
+                        I'm Nusrat Jahan, I've had the opportunity to experience and develop in a creative environment since 2022.
+                    </motion.p>
+                    <motion.p
+                        className="text-lg mb-4"
+                        variants={fadeInUp}
+                    >
+                        I always desire to break from my limitations. By honing design skills through years of experience, I believe that my design can connect well with your audience.
+                    </motion.p>
+                    <motion.p
+                        className="text-lg mb-6"
+                        variants={fadeInUp}
+                    >
+                        Let's make it happen together!
+                    </motion.p>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <button className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+                            Download CV <Download className="ml-2 h-4 w-4" />
+                        </button>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

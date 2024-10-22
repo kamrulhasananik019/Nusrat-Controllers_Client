@@ -35,9 +35,11 @@ const Home = () => {
                     {/* Pass each profile object to Hero and About */}
                     <Hero profileImage={profile} />
                     <About profileImage={profile} />
-                </div>  ))}
-            <Sliders />
-
+                </div>))}
+            <div className='bg-gradient-to-r from-blue-300 to-blue-800 p-5 '>
+                <Portfolio />
+                <Sliders />
+            </div>
             <Services />
             <Review />
             <Expertise />
