@@ -29,13 +29,16 @@ const Portfolio = () => {
                 <h2 className="text-3xl md:text-6xl font-semibold text-center text-white pb-24">My Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-5">
                     {displayedProjects.map((project, index) => (
-                        <div key={index} className="bg-white p-5 rounded-3xl shadow-lg">
-                            <img src={project?.imageUrl} alt={project?.title} className="w-full h-auto rounded-3xl" />
-                            <div className='p-4'>
-                                <p className="my-2 text-gray-600 font-semibold">{project?.category}</p>
-                                <h3 className="text-2xl font-semibold hover:text-blue-600">{project?.titlename}</h3>
+                        <a href={project?.projectlink} target="_blank" rel="noopener noreferrer">
+                            <div key={index} className="bg-white p-5 rounded-3xl shadow-lg">
+                                <img src={project?.imageUrl} alt={project?.title} className="w-full h-auto rounded-3xl" />
+                                <div className="p-4">
+                                    <p className="my-2 text-gray-600 font-semibold">{project?.category}</p>
+                                    <h3 className="text-2xl font-semibold hover:text-blue-600">{project?.titlename}</h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+
                     ))}
                 </div>
                 {projects.length > 6 && (

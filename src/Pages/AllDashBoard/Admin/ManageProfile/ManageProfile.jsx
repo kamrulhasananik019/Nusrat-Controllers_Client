@@ -120,8 +120,8 @@ const ManageProfile = () => {
     }, []);
 
     return user ? (
-        <div>
-            <h2>Manage Profile</h2>
+        <div className='container mx-auto'>
+            <h2 className='text-2xl font-semibold my-5'>Manage Profile</h2>
             {profile && (
                 <div>
                     <img src={profile.imageUrl} alt="Profile" width="100" />

@@ -3,7 +3,7 @@ import React from 'react';
 // import freelancer from '../assets/icons/freelancer.png';
 // import linkedIn from '../assets/icons/linkedIn.png';
 
-const Hero = () => {
+const Hero = ({profileImage}) => {
     return (
         <section className=' bg-gray-100' id="Home">
             <div className="container mx-auto  md:py-32 lg:py-32  py-16 px-8">
@@ -17,7 +17,9 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="flex-1 text-center md:text-left md:mb-0 mb-10">
-                        <img src='https://firebasestorage.googleapis.com/v0/b/nusrat-graphi.appspot.com/o/nusrat-hero-image%2Fnusratjahan.jpg?alt=media&token=78482093-c18d-42a5-a7b3-f93a502a2630' alt="Nusrat Jahan" className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto" />
+                    {profileImage && (
+                <img src={profileImage?.imageUrl} alt="Profile" className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto" />
+            )}
                     </div>
                 </div>
                 <h3 className='text-xl font-semibold md:mt-10 text-center md:text-start'>

@@ -58,6 +58,7 @@ const AddPortfolio = () => {
             const response = await axiosSecure.post('/addportfolio', {
                 category: formData.category,
                 titlename: formData.titlename,
+                projectlink:formData.projectlink,
                 email: user.email,
                 displayName: user.displayName,
                 imageUrl
@@ -110,6 +111,12 @@ const AddPortfolio = () => {
                         <div className='grid'>
                             <label htmlFor="category">Category</label>
                             <input type="text" name="category" required {...register('category')} />
+                        </div>
+                    </div>
+                    <div>
+                        <div className='grid my-5'>
+                            <label htmlFor="projectlink">Project Link</label>
+                            <input type="text" name="projectlink" required {...register('projectlink')} />
                         </div>
                     </div>
                     <div>

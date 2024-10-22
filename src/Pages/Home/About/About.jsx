@@ -1,14 +1,14 @@
 import React from 'react';
 import CountUp from 'react-countup';
 
-const About = () => {
+const About = ({ profileImage }) => {
     return (
         <section className='bg-[#1F1F1F]' id="about">
             <div className="container mx-auto flex flex-col md:flex-row py-20 px-4 items-center ">
                 <div className="flex-1 text-center  mb-10 md:mb-0 ">
-
-                    <img src="https://firebasestorage.googleapis.com/v0/b/nusrat-graphi.appspot.com/o/nusrat-hero-image%2Fnusratjahan.jpg?alt=media&token=78482093-c18d-42a5-a7b3-f93a502a2630" alt="Nusrat Jahan"
-                        className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto border-4  border-blue-600" />
+                    {profileImage && (
+                        <img src={profileImage?.imageUrl} alt="Profile" className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto border-4  border-blue-600" />
+                    )}
 
 
                     {/* Overlay for the counters */}
