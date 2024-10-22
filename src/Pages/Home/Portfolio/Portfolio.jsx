@@ -25,7 +25,7 @@ const Portfolio = () => {
     const displayedProjects = showAll ? [...projects].reverse() : [...projects].reverse().slice(0, 6);
 
     return (
-        <section className='bg-gradient-to-r from-blue-300 to-blue-800 p-5 '>
+        <section >
             <div className="container mx-auto pb-36 pt-16" id='portfolio'>
                 <h2 className="text-3xl md:text-6xl font-semibold text-center text-white pb-24">My Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-10">

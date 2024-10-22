@@ -7,6 +7,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import Review from '../Review/Review';
 import Sliders from '../Sliders/Sliders';
 import useAxiosPublic from '../../../Components/Hook/useAxiosPublic';
+import ContactUs from '../ContactUs/ContactUs';
 
 
 const Home = () => {
@@ -36,13 +37,18 @@ const Home = () => {
                     <Hero profileImage={profile} />
                     <About profileImage={profile} />
                 </div>))}
-            <div className='bg-gradient-to-r from-blue-300 to-blue-800 p-5 '>
+            <div className='bg-gradient-to-r from-blue-600 via-purple-500 to-blue-300'>
                 <Portfolio />
+
+            </div>
+            <div  className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20">
                 <Sliders />
             </div>
+
             <Services />
             <Review />
-            <Expertise />
+            <ContactUs/>
+            
         </div>
     );
 };

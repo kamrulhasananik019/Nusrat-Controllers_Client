@@ -4,18 +4,16 @@ import { motion } from 'framer-motion';
 const Hero = ({ profileImage }) => {
     return (
         <section 
-            className="bg-gradient-to-br from-blue-50 to-blue-100" 
+            className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20" 
             id="Home"
         >
             <div className="container mx-auto md:py-32 lg:py-40 py-20 px-8">
-                <div className='flex flex-col-reverse md:flex-row'>
+                <div className='flex flex-col-reverse md:flex-row data-aos="fade-right"'>
                     
                     {/* Text Section */}
-                    <motion.div 
+                    <div 
                         className="flex-1 pr-0 md:pr-10 text-center md:text-left mb-10 md:mb-0 md:pt-4 lg:pt-10"
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                        
                     >
                         <motion.h2 
                             className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -34,7 +32,7 @@ const Hero = ({ profileImage }) => {
                         <div className="flex justify-center md:justify-start space-x-4">
                             <motion.button 
                                 className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-blue-700 focus:outline-none"
-                                whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(59, 130, 246, 0.5)' }}
+                                whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(59, 130, 246, 0.5)', backgroundColor: '#2563eb' }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 Contact Me
@@ -47,7 +45,7 @@ const Hero = ({ profileImage }) => {
                                 See My Work
                             </motion.button>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Image Section */}
                     <motion.div 
@@ -60,8 +58,8 @@ const Hero = ({ profileImage }) => {
                             <motion.img
                                 src={profileImage?.imageUrl}
                                 alt="Profile"
-                                className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto border-4 border-white shadow-lg"
-                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                className="rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto border-4 border-white shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
+                                whileHover={{ scale: 1.1, rotate: 5, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
                             />
                         )}
                     </motion.div>
@@ -80,13 +78,13 @@ const Hero = ({ profileImage }) => {
                 {/* Company Logos */}
                 <motion.div 
                     className='flex md:w-40 gap-5 mt-2 justify-center md:justify-start'
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.9, duration: 0.8 }}
                 >
-                    {/* <img src={linkedIn} alt="" className='h-5 md:h-8'/>
-                    <img src={fiver} alt=""  className='h-5 md:h-8'/>
-                    <img src={freelancer} alt="" className='h-6 md:h-10'/> */}
+                    {/* <img src="/path/to/your/logo1.png" alt="Logo 1" className='h-5 md:h-8'/>
+                    <img src="/path/to/your/logo2.png" alt="Logo 2" className='h-5 md:h-8'/>
+                    <img src="/path/to/your/logo3.png" alt="Logo 3" className='h-6 md:h-10'/> */}
                 </motion.div>
             </div>
         </section>
