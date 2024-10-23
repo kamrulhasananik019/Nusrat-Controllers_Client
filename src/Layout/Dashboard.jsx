@@ -45,6 +45,20 @@ const Dashboard = () => {
                                     <div className="divider"></div>
 
                                     <li>
+                                        <NavLink to="/dashboard/addexperience">
+                                            <FaBook className="mr-2" /> Add Experience
+                                        </NavLink>
+                                    </li>
+
+                                    <li>
+                                        <NavLink to="/dashboard/deleteexperience">
+                                            <FaBook className="mr-2" /> Delete Experience
+                                        </NavLink>
+                                    </li>
+
+                                    <div className="divider"></div>
+
+                                    <li>
                                         <NavLink to="/dashboard/addservices">
                                             <FaBook className="mr-2" /> Add Services
                                         </NavLink>
