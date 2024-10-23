@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import useAxiosPublic from '../../../Components/Hook/useAxiosPublic';
 
-const Sliders = () => {
+const Sliders = ({aos}) => {
     const axiosPublic = useAxiosPublic()
     // Fetch sliders
     const { data: sliders = [], isLoading } = useQuery({
@@ -30,10 +30,10 @@ const Sliders = () => {
     return (
         <section>
             <div className='container mx-auto p-5 px-3'>
-                <h2 className='text-3xl md:text-6xl text-center mb-5 font-semibold  text-white'>Carousel Design</h2>
-                <div className='py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                <h2 className='text-3xl md:text-6xl text-center mb-5 font-semibold  text-white'  data-aos={aos}>Carousel Design</h2>
+                <div className='py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos={aos}>
                     {/* Slider 1 */}
-                    <div>
+                    <div  >
                         <Swiper
                             spaceBetween={20}
                             autoplay={{ delay: 3000 }}

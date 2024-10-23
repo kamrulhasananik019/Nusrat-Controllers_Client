@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import useAxiosPublic from '../../../Components/Hook/useAxiosPublic';
 
-const Portfolio = () => {
+const Portfolio = ({aos}) => {
     const [projects, setProjects] = useState([]);
     const [showAll, setShowAll] = useState(false);
     const axiosPublic = useAxiosPublic();
@@ -27,7 +27,7 @@ const Portfolio = () => {
     return (
         <section >
             <div className="container mx-auto pb-36 pt-16" id='portfolio'>
-                <h2 className="text-3xl md:text-6xl font-semibold text-center text-white pb-24">My Projects</h2>
+                <h2 className="text-3xl md:text-6xl font-semibold text-center text-white pb-24" data-aos={aos}>My Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-10">
                     {displayedProjects.map((project, index) => (
                         <motion.a
@@ -41,7 +41,7 @@ const Portfolio = () => {
                             whileHover={{ scale: 1.05 }}
                             className="transform transition duration-300 ease-out"
                         >
-                            <div className="bg-white p-5 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col">
+                            <div className="bg-white p-5 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col"  data-aos={aos}>
                                 <motion.img 
                                     src={project?.imageUrl} 
                                     alt={project?.title} 

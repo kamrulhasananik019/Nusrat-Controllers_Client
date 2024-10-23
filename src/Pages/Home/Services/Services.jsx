@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { motion } from 'framer-motion';
 
-const Services = () => {
+const Services = ({aos}) => {
     const [services, setServices] = useState([]);
     const axiosPublic = useAxiosPublic();
 
@@ -28,8 +28,8 @@ const Services = () => {
     return (
         <section className="py-20 bg-gradient-to-b from-blue-500 to-blue-300">
             <div className="container mx-auto">
-                <h2 className="text-3xl md:text-6xl font-semibold text-center mb-12">
-                    My <span className="text-blue-300">Services</span>
+                <h2 className="text-3xl md:text-6xl font-semibold text-center mb-12 text-white" data-aos={aos}>
+                    My Services
                 </h2>
 
                 <Swiper
@@ -47,6 +47,7 @@ const Services = () => {
                             spaceBetween: 20,
                         },
                     }}
+                    data-aos={aos}
                 >
                     {services.map((service, index) => (
                         <SwiperSlide key={index}>

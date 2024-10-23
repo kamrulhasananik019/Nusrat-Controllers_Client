@@ -1,27 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Hero = ({ profileImage }) => {
+const Hero = ({ profileImage, aosAttributes }) => {
+
     return (
-        <section 
-            className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20" 
+        <section
+            className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20"
             id="Home"
         >
             <div className="container mx-auto md:py-32 lg:py-40 py-20 px-8">
-                <div className='flex flex-col-reverse md:flex-row data-aos="fade-right"'>
-                    
+                <div className='flex flex-col-reverse md:flex-row ' >
+
                     {/* Text Section */}
-                    <div 
+                    <div
                         className="flex-1 pr-0 md:pr-10 text-center md:text-left mb-10 md:mb-0 md:pt-4 lg:pt-10"
-                        
+                        {...aosAttributes}
                     >
-                        <motion.h2 
+                        <motion.h2
                             className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-transparent bg-clip-text"
                             whileHover={{ scale: 1.05 }}
                         >
                             YOUR VISION,<br /> MY MISSION
                         </motion.h2>
-                        <motion.p 
+                        <motion.p
                             className="text-base md:text-lg lg:text-xl text-gray-700 mb-6"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -30,14 +31,14 @@ const Hero = ({ profileImage }) => {
                             Ready to Make Your Brand Shine? Let's Bring Your Vision to Life!
                         </motion.p>
                         <div className="flex justify-center md:justify-start space-x-4">
-                            <motion.button 
+                            <motion.button
                                 className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-blue-700 focus:outline-none"
                                 whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(59, 130, 246, 0.5)', backgroundColor: '#2563eb' }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 Contact Me
                             </motion.button>
-                            <motion.button 
+                            <motion.button
                                 className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-xl focus:outline-none"
                                 whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(59, 130, 246, 0.5)' }}
                                 whileTap={{ scale: 0.95 }}
@@ -48,7 +49,7 @@ const Hero = ({ profileImage }) => {
                     </div>
 
                     {/* Image Section */}
-                    <motion.div 
+                    <motion.div
                         className="flex-1 text-center md:text-left md:mb-0 mb-10"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -66,7 +67,7 @@ const Hero = ({ profileImage }) => {
                 </div>
 
                 {/* Footer Text */}
-                <motion.h3 
+                <motion.h3
                     className='text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 md:mt-10 text-center md:text-start'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -76,7 +77,7 @@ const Hero = ({ profileImage }) => {
                 </motion.h3>
 
                 {/* Company Logos */}
-                <motion.div 
+                <motion.div
                     className='flex md:w-40 gap-5 mt-2 justify-center md:justify-start'
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}

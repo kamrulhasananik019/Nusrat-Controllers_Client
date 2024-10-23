@@ -3,13 +3,18 @@ import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { Download } from 'lucide-react';
 
-const About = ({ profileImage }) => {
+const About = ({ profileImage, aosAttributes }) => {
+    // Destructure AOS attributes
+    const { 'data-aos': fadeRight, 'data-aos': fadeUp, 'data-aos-delay': dataAosDelay, 'data-aos-anchor-placement': dataAosAnchorPlacement } = aosAttributes || {};
+
+    // Motion variants for fade-up animation
     const fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
     };
 
+    // Data for statistics
     const statsData = [
         { value: 4, label: 'Years Experience' },
         { value: 300, label: 'Completed Projects' },
@@ -17,18 +22,18 @@ const About = ({ profileImage }) => {
     ];
 
     return (
-        <section 
+        <section
             className="bg-gradient-to-b from-blue-900 to-blue-600 text-white py-20"
             id="about"
         >
             <div className="container mx-auto flex flex-col lg:flex-row py-20 px-4 items-center space-y-12 lg:space-y-0 lg:space-x-12">
-                
-                {/* Profile Section */}
-                <motion.div
+
+                {/* Profile Section with fade-right AOS animation */}
+                <div
                     className="flex-1 text-center lg:text-left"
-                    initial="initial"
-                    animate="animate"
-                    variants={fadeInUp}
+                    data-aos="fade-right"                    // Use fade-right for AOS animation
+                    data-aos-delay={dataAosDelay}             // Optional delay
+                    data-aos-anchor-placement={dataAosAnchorPlacement}
                 >
                     {profileImage && (
                         <div className="relative inline-block">
@@ -67,31 +72,31 @@ const About = ({ profileImage }) => {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
 
-                {/* Text Section */}
-                <motion.div
+                {/* Text Section with fade-up AOS animation */}
+                <div
                     className="flex-1 lg:pl-10 text-center lg:text-left"
-                    initial="initial"
-                    animate="animate"
-                    variants={fadeInUp}
+                    data-aos="fade-up"                       // Use fade-up for AOS animation
+                    data-aos-delay={dataAosDelay}             // Optional delay
+                    data-aos-anchor-placement={dataAosAnchorPlacement}
                 >
                     <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-blue-100">About Me</h2>
-                    <motion.p className="text-lg mb-4 text-blue-100" variants={fadeInUp}>
+                    <p className="text-lg mb-4 text-blue-100" variants={fadeInUp}>
                         I'm Nusrat Jahan, I've had the opportunity to experience and develop in a creative environment since 2022.
-                    </motion.p>
-                    <motion.p className="text-lg mb-4 text-blue-100" variants={fadeInUp}>
+                    </p>
+                    <p className="text-lg mb-4 text-blue-100" variants={fadeInUp}>
                         I always desire to break from my limitations. By honing design skills through years of experience, I believe that my design can connect well with your audience.
-                    </motion.p>
-                    <motion.p className="text-lg mb-6 text-blue-100" variants={fadeInUp}>
+                    </p>
+                    <p className="text-lg mb-6 text-blue-100" variants={fadeInUp}>
                         Let's make it happen together!
-                    </motion.p>
+                    </p>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <button className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition ease-in-out duration-300">
+                        <button className="px-6 py-3 flex bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition ease-in-out duration-300">
                             Download CV <Download className="ml-2 h-4 w-4" />
                         </button>
                     </motion.div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

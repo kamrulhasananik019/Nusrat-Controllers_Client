@@ -5,7 +5,7 @@ import 'swiper/css/effect-cards';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import useAxiosPublic from '../../../Components/Hook/useAxiosPublic';
 
-const Review = () => {
+const Review = ({aos}) => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -30,9 +30,9 @@ const Review = () => {
 
     return (
         <section className="pt-16 pb-36 bg-gradient-to-b from-blue-500 to-blue-300">
-            <div className="container mx-auto">
-                <h2 className="text-3xl md:text-6xl font-semibold text-center mb-20 text-white">
-                    Trusted by Global <span className="text-blue-600">Customers</span>
+            <div className="container mx-auto" >
+                <h2 className="text-3xl md:text-6xl font-semibold text-center mb-20 text-white" data-aos={aos}>
+                    Trusted by Global Customers
                 </h2>
                 {loading && (
                     <div className="text-center text-gray-300 text-xl">Loading reviews...</div>
@@ -52,6 +52,7 @@ const Review = () => {
                             1024: { slidesPerView: 3 },
                         }}
                         className="mySwiper"
+                        data-aos={aos}
                     >
                         {reviews.map((review) => (
                             <SwiperSlide key={review._id}>

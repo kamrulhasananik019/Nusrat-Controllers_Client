@@ -8,11 +8,17 @@ import Review from '../Review/Review';
 import Sliders from '../Sliders/Sliders';
 import useAxiosPublic from '../../../Components/Hook/useAxiosPublic';
 import ContactUs from '../ContactUs/ContactUs';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Home = () => {
     const axiosPublic = useAxiosPublic()
     const [profileImage, setProfileImage] = useState([]);
+
+    useEffect(() => {
+        AOS.init({ duration: 1500 }); // Initialize AOS with a duration of 1 second
+    }, []);
 
 
     // Fetch portfolio data
@@ -34,21 +40,25 @@ const Home = () => {
             {profileImage.length > 0 && profileImage.map((profile, index) => (
                 <div key={index}>
                     {/* Pass each profile object to Hero and About */}
-                    <Hero profileImage={profile} />
-                    <About profileImage={profile} />
+                    <Hero profileImage={profile} aosAttributes={{ "data-aos": "fade-right" }} />
+                    <About profileImage={profile} aosAttributes={{
+                        "data-aos": "fade-up",
+                        "data-aos-anchor-placement": "top-bottom",
+                        "data-aos": "fade-right"
+                    }} />
                 </div>))}
             <div className='bg-gradient-to-r from-blue-600 via-purple-500 to-blue-300'>
-                <Portfolio />
+                <Portfolio aos="fade-up" />
 
             </div>
-            <div  className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20">
-                <Sliders />
+            <div className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20">
+                <Sliders aos="fade-up" />
             </div>
 
-            <Services />
-            <Review />
-            <ContactUs/>
-            
+            <Services  aos="fade-up"/>
+            <Review  aos="fade-up"/>
+            <ContactUs aos="fade-up"/>
+
         </div>
     );
 };

@@ -2,10 +2,10 @@ import React from 'react';
 import { FaLinkedin, FaInstagram, FaBehanceSquare } from "react-icons/fa";
 import { TbBrandFiverr } from "react-icons/tb";
 
-const ContactUs = () => {
+const ContactUs = ({aos}) => {
     return (
         <section className='bg-gradient-to-b from-blue-200 to-blue-100'>
-            <div className='container mx-auto px-5 pb-10'>
+            <div className='container mx-auto px-5 pb-10' data-aos={aos}>
                 <div className='text-center py-10'>
                     <h2 className='text-4xl font-bold text-gray-800'>Let's Connect!</h2>
                     <p className='pt-2 text-lg text-gray-600'>Let’s create something unique together! Here’s how you can reach out to me:</p>
