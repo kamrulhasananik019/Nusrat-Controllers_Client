@@ -40,8 +40,10 @@ const About = ({ profileImage, aosAttributes }) => {
     ];
 
     return (
+        
         <section
-            className="bg-gradient-to-b from-blue-900 to-blue-600 text-white py-20"
+            className="bg-[#111111] text-white py-20"
+            // className="bg-gradient-to-t from-blue-500 to-slate-900 text-white py-20"
             id="about"
         >
             <div className='container mx-auto '>
@@ -142,7 +144,7 @@ const About = ({ profileImage, aosAttributes }) => {
                                 <SwiperSlide key={skill._id} >
                                 <motion.div
                                     key={skill.title}
-                                    className="relative group overflow-hidden border-2 m-2 border-blue-500 rounded-lg shadow-lg flex flex-col items-center p-6 transition-all duration-300 bg-gradient-to-br from-blue-600 via-blue-500"
+                                    className="relative group overflow-hidden border-2 m-2 border-blue-700 rounded-lg shadow-lg flex flex-col items-center p-6 transition-all duration-300 bg-blue-800"
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     {/* Skill Image with hover effect */}

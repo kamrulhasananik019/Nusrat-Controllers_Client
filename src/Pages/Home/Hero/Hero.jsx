@@ -5,7 +5,9 @@ const Hero = ({ profileImage, aosAttributes }) => {
 
     return (
         <section
-            className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20"
+            className="bg-[#111111] text-white py-20"
+            // className="bg-gradient-to-t from-blue-800 to-slate-900 text-white py-20"
+            // className="bg-gradient-to-b from-blue-800 to-blue-900 text-white py-20"
             id="Home"
         >
             <div className="container mx-auto md:py-32 lg:py-40 py-20 px-8">
@@ -17,13 +19,14 @@ const Hero = ({ profileImage, aosAttributes }) => {
                         {...aosAttributes}
                     >
                         <motion.h2
-                            className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-transparent bg-clip-text"
+                            className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 bg-gradient-to-tr to-blue-500 from-blue-700 text-transparent bg-clip-text stroke-white"
+                            // className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-transparent bg-clip-text"
                             whileHover={{ scale: 1.05 }}
                         >
                             YOUR VISION,<br /> MY MISSION
                         </motion.h2>
                         <motion.p
-                            className="text-base md:text-lg lg:text-xl text-gray-700 mb-6"
+                            className="text-base md:text-lg lg:text-xl text-white-700 mb-6"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3, duration: 0.8 }}
@@ -32,14 +35,15 @@ const Hero = ({ profileImage, aosAttributes }) => {
                         </motion.p>
                         <div className="flex justify-center md:justify-start space-x-4">
                             <motion.button
-                                className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-blue-700 focus:outline-none"
+                                // className="bg-white  font-bold py-2 px-4 rounded-full hover:bg-blue-800 hover:text-white"
+                                className="px-6 py-3 bg-blue-600 text-blue-200 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-blue-500 hover:text-white focus:outline-none"
                                 whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(59, 130, 246, 0.5)', backgroundColor: '#2563eb' }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 Contact Me
                             </motion.button>
                             <motion.button
-                                className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-xl focus:outline-none"
+                                className="px-6 py-3 border-2 border-blue-200 text-blue-200 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:bg-blue-600 hover:text-white hover:scale-105 hover:shadow-xl focus:outline-none"
                                 whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(59, 130, 246, 0.5)' }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -68,7 +72,7 @@ const Hero = ({ profileImage, aosAttributes }) => {
 
                 {/* Footer Text */}
                 <motion.h3
-                    className='text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 md:mt-10 text-center md:text-start'
+                    className='text-xl md:text-2xl lg:text-3xl font-semibold text-white-800 md:mt-10 text-center md:text-start'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.8 }}

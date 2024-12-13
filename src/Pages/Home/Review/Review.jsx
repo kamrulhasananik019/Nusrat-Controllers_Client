@@ -29,7 +29,7 @@ const Review = ({aos}) => {
     }, [axiosPublic]);
 
     return (
-        <section className="pt-16 pb-36 bg-gradient-to-b from-blue-500 to-blue-300">
+        <section className="pt-16 pb-36 bg-[#111111]">
             <div className="container mx-auto" >
                 <h2 className="text-3xl md:text-6xl font-semibold text-center mb-20 text-white" data-aos={aos}>
                     Trusted by Global Customers
@@ -56,7 +56,7 @@ const Review = ({aos}) => {
                     >
                         {reviews.map((review) => (
                             <SwiperSlide key={review._id}>
-                                <div className="bg-white p-6 rounded-xl shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 border-2 border-blue-400">
+                                <div className="bg-[#161616] p-6 rounded-xl shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 border-2 border-blue-500">
                                     <div className="flex items-center justify-between mb-4">
                                         <img src={review.imageUrl} alt={review.name} className="object-cover w-12 h-12 rounded-full bg-gray-500" />
                                         <div className="flex items-center space-x-2 text-yellow-400">
@@ -66,8 +66,8 @@ const Review = ({aos}) => {
                                             <span className="text-xl font-bold px-2">{review.rating} </span>
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2 text-gray-800">{review?.name}</h3>
-                                    <p className="text-gray-700 mb-4">{review.reviewText}</p>
+                                    <h3 className="text-xl font-semibold mb-2 text-white">{review?.name}</h3>
+                                    <p className="text-gray-400 mb-4">{review.reviewText}</p>
                                 </div>
                             </SwiperSlide>
                         ))}
