@@ -50,7 +50,7 @@ const LogIn = () => {
     }
 
     return (
-        <div className='bg-[#FCE5E6]'>
+        <div className='bg-[#111111]'>
             <div className="hero-content grid grid-cols-1 md:grid-cols-2 mx-auto">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold py-5">Login now!</h1>

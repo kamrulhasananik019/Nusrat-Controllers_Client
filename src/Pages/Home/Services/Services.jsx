@@ -26,7 +26,7 @@ const Services = ({aos}) => {
     }, [axiosPublic]);
 
     return (
-        <section className="py-20 bg-gradient-to-b from-blue-500 to-blue-300">
+        <section className="py-20 bg-[#111111]">
             <div className="container mx-auto">
                 <h2 className="text-3xl md:text-6xl font-semibold text-center mb-12 text-white" data-aos={aos}>
                     My Services
@@ -52,7 +52,7 @@ const Services = ({aos}) => {
                     {services.map((service, index) => (
                         <SwiperSlide key={index}>
                             <motion.div
-                                className="bg-white p-6 m-2 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2"
+                                className="bg-[#161616] p-6 m-2 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2"
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.8 }}
@@ -62,7 +62,7 @@ const Services = ({aos}) => {
                                     <img className="w-24 h-24 rounded-full border-4 border-blue-600 mx-auto" src={service?.imageUrl} alt={service?.serviceName} />
                                 </div>
                                 <h3 className="text-2xl font-semibold text-center mb-2">{service?.serviceName}</h3>
-                                <p className="text-gray-800 text-center my-5">{service?.description}</p>
+                                <p className="text-gray-500 text-center my-5">{service?.description}</p>
                                 <div className="text-center">
                                     <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded transition-colors duration-300">
                                         Get Started &rarr;

@@ -4,12 +4,12 @@ import { TbBrandFiverr } from "react-icons/tb";
 
 const ContactUs = ({aos}) => {
     return (
-        <section className='bg-gradient-to-b from-blue-200 to-blue-100'>
+        <section className='bg-[#111111]'>
             <div className='container mx-auto px-5 pb-10' data-aos={aos}>
                 <div className='text-center py-10'>
-                    <h2 className='text-4xl font-bold text-gray-800'>Let's Connect!</h2>
-                    <p className='pt-2 text-lg text-gray-600'>Let’s create something unique together! Here’s how you can reach out to me:</p>
-                    <div className='flex gap-5 text-3xl text-blue-600 justify-center py-5'>
+                    <h2 className='text-4xl font-bold text-white'>Let's Connect!</h2>
+                    <p className='pt-2 text-lg text-white'>Let’s create something unique together! Here’s how you can reach out to me:</p>
+                    <div className='flex gap-5 text-3xl text-blue-300 justify-center py-5'>
                         <a href="https://www.linkedin.com/in/nusratjahangraphi-/" aria-label="LinkedIn" className='transition-transform transform hover:scale-110'>
                             <FaLinkedin />
                         </a>
@@ -25,7 +25,7 @@ const ContactUs = ({aos}) => {
                     </div>
                     <a 
                         href='https://calendly.com/isratjahantanny15/consultation-support' 
-                        className='border text-lg px-6 py-3 hover:bg-blue-600 hover:text-white border-blue-600 text-blue-600 rounded-md transition duration-300 ease-in-out'
+                        className='border text-lg px-6 py-3 mt-4 hover:bg-blue-600 hover:text-white border-blue-400 text-blue-400 rounded-md transition duration-300 ease-in-out'
                     >
                         Book a Call
                     </a>

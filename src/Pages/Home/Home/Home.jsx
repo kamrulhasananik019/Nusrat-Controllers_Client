@@ -46,11 +46,11 @@ const Home = () => {
                         "data-aos": "fade-right"
                     }} />
                 </div>))}
-            <div className='bg-gradient-to-r from-blue-600 via-purple-500 to-blue-300'>
+            <div className='bg-[#111111]'>
                 <Portfolio aos="fade-up" />
 
             </div>
-            <div className="bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20">
+            <div className="bg-[#111111] text-white py-20">
                 <Sliders aos="fade-up" />
             </div>
 

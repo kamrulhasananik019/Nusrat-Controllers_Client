@@ -13,7 +13,7 @@ const Header = () => {
     }
 
     return (
-        <section className='bg-gradient-to-b from-blue-900 to-blue-700 text-white  font-semibold  '>
+        <section className='bg-black font-semibold  '>
             <div className='md:mx-28'>
                 <div className="navbar  ">
                     <div className="navbar-start">
